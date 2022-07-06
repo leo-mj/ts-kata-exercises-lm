@@ -8,7 +8,7 @@
 function areIn(a1: string[], a2: string[]): string[] {
   const sortedArray: string[] = a1.filter((searchStr) => isIn(searchStr, a2));
   sortedArray.sort();
-  const uniqueArray: any[] = removeDuplicates(sortedArray);
+  const uniqueArray: string[] = removeDuplicates(sortedArray);
   return uniqueArray;
 }
 
@@ -19,7 +19,7 @@ function areIn(a1: string[], a2: string[]): string[] {
  * @returns {string[]} - array of strings that are substrings
  */
 function isIn(searchStr: string, strArray: string[]): boolean {
-  for (let str of strArray) {
+  for (const str of strArray) {
     if (str.search(searchStr) != -1) {
       return true;
     }
@@ -34,7 +34,7 @@ function isIn(searchStr: string, strArray: string[]): boolean {
  */
 function removeDuplicates(strArray: string[]): string[] {
   const uniqueArray: string[] = [];
-  for (let str of strArray) {
+  for (const str of strArray) {
     if (!uniqueArray.includes(str)) {
       uniqueArray.push(str);
     }
