@@ -8,7 +8,9 @@ Return the count of all strings in an array of numbers and strings.  Use array f
  * @returns the total
  */
 function countStrings(inputArray: (number | string)[]): number {
-  const stringArray = inputArray.filter(element => typeof(element)=== "string");
+  const stringArray = inputArray.filter(
+    (element) => typeof element === "string",
+  );
   return stringArray.length;
 }
 
