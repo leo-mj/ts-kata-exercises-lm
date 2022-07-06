@@ -6,7 +6,7 @@
  * @returns {string[]} - the array of sorted strings of a1 that are substrings of a string of a2
  */
 function areIn(a1: string[], a2: string[]): string[] {
-  const sortedArray: string[] = a1.filter(searchStr => isIn(searchStr,a2));
+  const sortedArray: string[] = a1.filter((searchStr) => isIn(searchStr, a2));
   sortedArray.sort();
   const uniqueArray: any[] = removeDuplicates(sortedArray);
   return uniqueArray;
