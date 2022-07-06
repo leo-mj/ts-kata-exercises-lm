@@ -24,7 +24,7 @@ test("areIn sorts the returned array alphabetically", () => {
   ).toStrictEqual(["arp", "live", "strong"]);
 });
 
-test("are In avoids duplicate strings in its return", () => {
+test("areIn avoids duplicate strings in its return", () => {
   expect(
     areIn(
       ["arp", "live", "arp"],
